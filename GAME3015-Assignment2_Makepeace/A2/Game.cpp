@@ -19,8 +19,10 @@ bool Game::Initialize()
 	if (!D3DApp::Initialize())
 		return false;
 
-
+	//Initialize Camera Position
 	mCamera.SetPosition(0, 3, -2);
+
+	// Set Camera Rotation
 	mCamera.Pitch(3.14 / 3.1);
 
 	// Reset the command list to prep for initialization commands.

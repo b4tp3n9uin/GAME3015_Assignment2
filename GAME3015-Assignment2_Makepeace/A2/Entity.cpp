@@ -4,10 +4,10 @@ Entity::Entity(Game* game) : SceneNode(game), mVelocity(0, 0)
 {
 }
 
-void Entity::setVelocity(XMFLOAT2 velocity)
-{
-	mVelocity = velocity;
-}
+//void Entity::setVelocity(XMFLOAT2 velocity)
+//{
+//	mVelocity = velocity;
+//}
 
 void Entity::setVelocity(float vx, float vy)
 {

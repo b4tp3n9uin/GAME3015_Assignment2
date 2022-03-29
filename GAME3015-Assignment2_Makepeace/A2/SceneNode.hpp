@@ -51,9 +51,11 @@ class Game;
 struct Command;
 
 
-
 namespace Category
 {
+	/** An enum type
+	 *  Enum for the different types of scene nodes in the game.
+	 */
 	enum Type
 	{
 		None,
@@ -76,38 +78,111 @@ public:
 
 
 public:
+	/// Constructor
+	/// 
+	/// @param (game) instance reference of a Game class
 	SceneNode(Game* game);
 
 	void attachChild(Ptr child);
 	Ptr	detachChild(const SceneNode& node);
 
+	/// Update function
+	/// 
+	/// @param (gt) passes GameTimer for the update function.
+	/// @returns no return type.
 	void update(const GameTimer& gt);
+
+	/// Draw function
+	/// 
+	/// @param no parameters.
+	/// @returns no return type.
 	void draw() const;
+
+	/// Build function
+	/// 
+	/// @param no parameters.
+	/// @returns no return type.
 	void build();
 
-	// getters
+	// Getters
+
+	/// Gets World Position
+	/// 
+	/// @param no parameters.
+	/// @returns Node's position as XMFLOAT3 reference
 	XMFLOAT3 getWorldPosition() const;
+
+	/// Gets Entity's Rotation
+	/// 
+	/// @param no parameters.
+	/// @returns Node's rotation as XMFLOAT3 reference
 	XMFLOAT3 getWorldRotation() const;
+
+	/// Gets Entity's Scale
+	/// 
+	/// @param no parameters.
+	/// @returns Node's position as XMFLOAT3 reference
 	XMFLOAT3 getWorldScale() const;
+
+	/// Gets Entity's Transformation
+	/// 
+	/// @param no parameters.
+	/// @returns Node's transformation as XMFLOAT3 reference
 	XMFLOAT4X4 getWorldTransform() const;
+
+
 	XMFLOAT4X4 getTransform() const;
 
 
-	// setters
+	// Setters
+
+	/// Sets Entity's Rotation
+	/// 
+	/// @param (x) Sets Node's x rotation
+	/// @param (y) Sets Node's y rotation
+	/// @param (z) Sets Node's z rotation
+	/// @returns no return type.
 	void setWorldRotation(float x, float y, float z);
+
+	/// Sets Entity's Position
+	/// 
+	/// @param (x) Sets Node's x position
+	/// @param (y) Sets Node's y position
+	/// @param (z) Sets Node's z position
+	/// @returns no return type.
 	void setPosition(float x, float y, float z);
 	void setPosition(XMFLOAT3 newScale);
+
+	/// Sets Entity's Scale
+	/// 
+	/// @param (x) Sets Node's x scale
+	/// @param (y) Sets Node's y scale
+	/// @param (z) Sets Node's z scale
+	/// @returns no return type.
 	void setScale(float x, float y, float z);
 	void setScale(XMFLOAT3 newScale);
 
 
-
+	/// Moves the entity
+	/// 
+	/// @param (x) Enitiy's movement in x direction.
+	/// @param (y) Enitiy's movement in y direction.
+	/// @param (z) Enitiy's movement in z direction.
+	/// @returns no return type.
 	void move(float x, float y, float z);
 	void move(XMFLOAT3 velocity);
 
-
+	/// Command Execution
+	/// 
+	/// @param (command) Passes in the command.
+	/// @param (gt) passes GameTimer.
+	/// @returns no return type.
 	void onCommand(const Command& command, const GameTimer& gt);
 
+	/// Gets Category of the commands
+	/// 
+	/// @param no parameters.
+	/// @returns an int value from enum Type.
 	virtual unsigned int getCategory() const;
 	void setCategory(int c);
 
@@ -124,10 +199,28 @@ protected:
 	Game* game;
 	RenderItem* renderer;
 private:
+
+	/**
+	* @brief (mWorldPosition) Current Position of the Node, passed as XMFLOAT3.
+	*/
 	XMFLOAT3 mWorldPosition;
+
+	/**
+	* @brief (mWorldRotation) Current Rotation of the Node, passed as XMFLOAT3.
+	*/
 	XMFLOAT3 mWorldRotation;
+
+	/**
+	* @brief (mWorldScaling) Current Scale of the Node, passed as XMFLOAT3.
+	*/
 	XMFLOAT3 mWorldScaling;
+
+
 	std::vector<Ptr> mChildren;
+
+	/**
+	* @brief (mParent) Parrent of the Scene Node.
+	*/
 	SceneNode* mParent;
 
 	int mCategory;

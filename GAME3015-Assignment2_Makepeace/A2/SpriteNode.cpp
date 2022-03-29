@@ -3,7 +3,7 @@
 
 SpriteNode::SpriteNode(Game* game) : Entity(game)
 {
-	backgroundSpeed = 0.001f;
+	backgroundSpeed = -0.003f;
 }
 
 void SpriteNode::drawCurrent() const
@@ -31,7 +31,7 @@ void SpriteNode::buildCurrent()
 
 void SpriteNode::Update(const GameTimer gt)
 {
-	move(0.0f, 0.0f, -0.001f);
+	move(0.0f, 0.0f, backgroundSpeed);
 }
 
 void SpriteNode::UpdateWithCmd(CommandQueue& commands)

@@ -4,15 +4,41 @@
 class Game : public D3DApp
 {
 public:
+	/// Constructor.
+	/// 
+	/// @param (hInstance) Instance of class
 	Game(HINSTANCE hInstance);
+
+	/// Constructor.
+	/// 
+	/// @param (rhs) constant pointer of A1 class
 	Game(const Game& rhs) = delete;
+	
 	Game& operator=(const Game& rhs) = delete;
+
+	/// Destructor.
+	/// 
+	/// @param no parameters
 	~Game();
 
+	/// Initialize function.
+	/// 
+	/// @param no parameters
+	/// @returns returns a boolean value.
 	virtual bool Initialize()override;
 private:
 	virtual void OnResize()override;
+
+	/// Update function
+	/// 
+	/// @param (gt) passes GameTimer for the update function.
+	/// @returns no return type.
 	virtual void Update(const GameTimer& gt)override;
+
+	/// Draw function
+	/// 
+	/// @param (gt) passes GameTimer.
+	/// @returns no return type.
 	virtual void Draw(const GameTimer& gt)override;
 
 	virtual void OnMouseDown(WPARAM btnState, int x, int y)override;
@@ -26,18 +52,40 @@ private:
 	void UpdateMaterialCBs(const GameTimer& gt);
 	void UpdateMainPassCB(const GameTimer& gt);
 
+	/// Handles the Commands in the Game.
+	/// 
+	/// @param no params.
+	/// @returns no return type.
 	void processInput();
 
 
 
 	//step5
+
+	/// Load Texture
+	/// 
+	/// @param no params.
+	/// @returns no return type.
 	void LoadTextures();
 
+	/// Build Root Signature
+	/// 
+	/// @param no params.
+	/// @returns no return type.
 	void BuildRootSignature();
 
 	//step9
+
+	/// Build Descriptor Heaps
+	/// 
+	/// @param no params.
+	/// @returns no return type.
 	void BuildDescriptorHeaps();
 
+	/// Build Shaders and Input Layout.
+	/// 
+	/// @param no params.
+	/// @returns no return type.
 	void BuildShadersAndInputLayout();
 	void BuildShapeGeometry();
 	void BuildPSOs();
@@ -49,9 +97,15 @@ private:
 	std::array<const CD3DX12_STATIC_SAMPLER_DESC, 6> GetStaticSamplers();
 
 private:
-
+	/**
+	* @brief (mFrameResources) Frame Resource Array
+	*/
 	std::vector<std::unique_ptr<FrameResource>> mFrameResources;
 	FrameResource* mCurrFrameResource = nullptr;
+
+	/**
+	* @brief (mCurrFrameResourceIndex) Frame Resource Array Index
+	*/
 	int mCurrFrameResourceIndex = 0;
 
 	UINT mCbvSrvDescriptorSize = 0;
@@ -89,9 +143,24 @@ private:
 	//float mPhi = 0.4f * XM_PI;
 	//float mRadius = 2.5f;
 
+	/**
+	* @brief (mLastMousePos) Lattest position of the mouse.
+	*/
 	POINT mLastMousePos;
+
+	/**
+	* @brief (mCamera) instance of the camera object.
+	*/
 	Camera mCamera;
+
+	/**
+	* @brief (mWorld) instance of the World Class object.
+	*/
 	World mWorld;
+
+	/**
+	* @brief (mPlayer) instance player object.
+	*/
 	Player mPlayer;
 
 public:
