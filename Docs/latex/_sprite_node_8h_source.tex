@@ -1,0 +1,38 @@
+\hypertarget{_sprite_node_8h_source}{}\doxysection{Sprite\+Node.\+h}
+\label{_sprite_node_8h_source}\index{A2/SpriteNode.h@{A2/SpriteNode.h}}
+\mbox{\hyperlink{_sprite_node_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_entity_8hpp}{Entity.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_command_queue_8h}{CommandQueue.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00005}\mbox{\hyperlink{class_sprite_node}{00005}} \textcolor{keyword}{class }\mbox{\hyperlink{class_sprite_node}{SpriteNode}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00007}00007 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00011}\mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover}{00011}}     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover}{BGMover}}}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00013}\mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_aa03f9359e1e5e409bfe0bb83ed003f79}{00013}}         XMFLOAT3 \mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_aa03f9359e1e5e409bfe0bb83ed003f79}{velocity}};}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00014}00014     }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00015}\mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_ac61833f9397e0b5bfbc22cc6b8413f26}{00015}}         \mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_ac61833f9397e0b5bfbc22cc6b8413f26}{BGMover}}(\textcolor{keywordtype}{float} vx, \textcolor{keywordtype}{float} vy, \textcolor{keywordtype}{float} vz) : \mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_aa03f9359e1e5e409bfe0bb83ed003f79}{velocity}}(vx, vy, vz)\{\}}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00016}\mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_a7743a25ebd2c8e2f596b16c4499a7e15}{00016}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_a7743a25ebd2c8e2f596b16c4499a7e15}{operator() }}(\mbox{\hyperlink{class_scene_node}{SceneNode}}\& node, \textcolor{keyword}{const} GameTimer\& gt) }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00017}00017         \{}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00018}00018             \mbox{\hyperlink{class_sprite_node}{SpriteNode}}\& spriteNode = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_sprite_node}{SpriteNode}}\&\textcolor{keyword}{>}(node);}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00019}00019             spriteNode.\mbox{\hyperlink{class_scene_node_aec657f40def4be5c901192ec85027a35}{move}}(\mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover_aa03f9359e1e5e409bfe0bb83ed003f79}{velocity}});}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00020}00020         \}}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00021}00021     \};}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00026}00026     \mbox{\hyperlink{class_sprite_node_af9a13269b4f3d7a194e1826c704155dc}{SpriteNode}}(\mbox{\hyperlink{class_game}{Game}}* \mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}});}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00032}00032     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_node_a123091dc0682bdffaeffe1b765ee20d3}{Update}}(\textcolor{keyword}{const} GameTimer gt);}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00034}00034     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_node_a237ab4cffda91e6975138ed60c265cf9}{UpdateWithCmd}}(\mbox{\hyperlink{class_command_queue}{CommandQueue}}\& commands);}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00039}\mbox{\hyperlink{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}{00039}}     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}{backgroundSpeed}};}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00041}00041 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00046}00046     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_node_af2b08010aaf9f08d6dff3bef56878664}{drawCurrent}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00052}00052     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_node_a2462cdafea4b33c9ccabbf4f2e5a6a7d}{buildCurrent}}();}
+\DoxyCodeLine{\Hypertarget{_sprite_node_8h_source_l00053}00053 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,225 @@
+\hypertarget{class_aircraft}{}\doxysection{Aircraft Class Reference}
+\label{class_aircraft}\index{Aircraft@{Aircraft}}
+
+
+{\ttfamily \#include $<$Aircraft.\+hpp$>$}
+
+Inheritance diagram for Aircraft\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_aircraft}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acd}{Type}} \{ \mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acdaed1ed20dae2d2d8eaa1d2186c6ee9315}{Eagle}}
+, \mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acdaf080b57c0c515dea65f056395cc6d59b}{Raptor}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enum type Enum for the different types of Aircrafts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aircraft_ae9d52b44a62c33bf411185829158fba4}{Aircraft}} (\mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acd}{Type}} type, \mbox{\hyperlink{class_game}{Game}} $\ast$\mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aircraft_a175e57562b3ee31f2f473ffe7b420550}{Update}} (const Game\+Timer \&gt)
+\begin{DoxyCompactList}\small\item\em Update function. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_aircraft_a01f9042934c08ef18b62351e6bca320d}{get\+Category}} () const
+\begin{DoxyCompactList}\small\item\em Gets the enum Type from the \mbox{\hyperlink{namespace_category}{Category}} Namespace from the \mbox{\hyperlink{class_scene_node}{Scene\+Node}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_aircraft_a21690c8600e97f085b96e3bb72444688}{draw\+Current}} () const
+\item 
+virtual void \mbox{\hyperlink{class_aircraft_a7dbd6abf6e74a25225a5e839eeb75732}{build\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Builds the Render Item for the Aircrafts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acd}{Type}} \mbox{\hyperlink{class_aircraft_a4228cdd5cf4f8b1b41ad481446b7ee4c}{m\+Type}}
+\begin{DoxyCompactList}\small\item\em (m\+Type) Enum type of \mbox{\hyperlink{class_aircraft}{Aircraft}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_aircraft_a09e5e4000b0512b92ab7bbd7efeac14f}{m\+Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8hpp_source_l00009}{9}} of file \mbox{\hyperlink{_aircraft_8hpp_source}{Aircraft.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_aircraft_a7dae28542933e088032b753600046acd}\label{class_aircraft_a7dae28542933e088032b753600046acd}} 
+\index{Aircraft@{Aircraft}!Type@{Type}}
+\index{Type@{Type}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acd}{Aircraft\+::\+Type}}}
+
+
+
+An enum type Enum for the different types of Aircrafts. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Eagle@{Eagle}!Aircraft@{Aircraft}}\index{Aircraft@{Aircraft}!Eagle@{Eagle}}}\mbox{\Hypertarget{class_aircraft_a7dae28542933e088032b753600046acdaed1ed20dae2d2d8eaa1d2186c6ee9315}\label{class_aircraft_a7dae28542933e088032b753600046acdaed1ed20dae2d2d8eaa1d2186c6ee9315}} 
+Eagle&enum Eagle for enemy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Raptor@{Raptor}!Aircraft@{Aircraft}}\index{Aircraft@{Aircraft}!Raptor@{Raptor}}}\mbox{\Hypertarget{class_aircraft_a7dae28542933e088032b753600046acdaf080b57c0c515dea65f056395cc6d59b}\label{class_aircraft_a7dae28542933e088032b753600046acdaf080b57c0c515dea65f056395cc6d59b}} 
+Raptor&enum Raptor for player \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{_aircraft_8hpp_source}{Aircraft.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_aircraft_ae9d52b44a62c33bf411185829158fba4}\label{class_aircraft_ae9d52b44a62c33bf411185829158fba4}} 
+\index{Aircraft@{Aircraft}!Aircraft@{Aircraft}}
+\index{Aircraft@{Aircraft}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{Aircraft()}{Aircraft()}}
+{\footnotesize\ttfamily Aircraft\+::\+Aircraft (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acd}{Type}}}]{type,  }\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (type)} & Type enum for the Type of \mbox{\hyperlink{class_aircraft}{Aircraft}}. \\
+\hline
+{\em (game)} & instance reference of a \mbox{\hyperlink{class_game}{Game}} class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_aircraft_8cpp_source}{Aircraft.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aircraft_a7dbd6abf6e74a25225a5e839eeb75732}\label{class_aircraft_a7dbd6abf6e74a25225a5e839eeb75732}} 
+\index{Aircraft@{Aircraft}!buildCurrent@{buildCurrent}}
+\index{buildCurrent@{buildCurrent}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{buildCurrent()}{buildCurrent()}}
+{\footnotesize\ttfamily void Aircraft\+::build\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Builds the Render Item for the Aircrafts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_af79c6134a7706a5901c7742b5f735956}{Scene\+Node}}.
+
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_aircraft_8cpp_source}{Aircraft.\+cpp}}.
+
+\mbox{\Hypertarget{class_aircraft_a21690c8600e97f085b96e3bb72444688}\label{class_aircraft_a21690c8600e97f085b96e3bb72444688}} 
+\index{Aircraft@{Aircraft}!drawCurrent@{drawCurrent}}
+\index{drawCurrent@{drawCurrent}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{drawCurrent()}{drawCurrent()}}
+{\footnotesize\ttfamily void Aircraft\+::draw\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_a0d7d32b925dde5ed087f112774a044b8}{Scene\+Node}}.
+
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_aircraft_8cpp_source}{Aircraft.\+cpp}}.
+
+\mbox{\Hypertarget{class_aircraft_a01f9042934c08ef18b62351e6bca320d}\label{class_aircraft_a01f9042934c08ef18b62351e6bca320d}} 
+\index{Aircraft@{Aircraft}!getCategory@{getCategory}}
+\index{getCategory@{getCategory}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{getCategory()}{getCategory()}}
+{\footnotesize\ttfamily unsigned int Aircraft\+::get\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the enum Type from the \mbox{\hyperlink{namespace_category}{Category}} Namespace from the \mbox{\hyperlink{class_scene_node}{Scene\+Node}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an enum type from the \mbox{\hyperlink{namespace_category}{Category}} Namespace. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_af713a8c58831a27bc791a2efdfb7c495}{Scene\+Node}}.
+
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{_aircraft_8cpp_source}{Aircraft.\+cpp}}.
+
+\mbox{\Hypertarget{class_aircraft_a175e57562b3ee31f2f473ffe7b420550}\label{class_aircraft_a175e57562b3ee31f2f473ffe7b420550}} 
+\index{Aircraft@{Aircraft}!Update@{Update}}
+\index{Update@{Update}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Aircraft\+::\+Update (\begin{DoxyParamCaption}\item[{const Game\+Timer \&}]{gt }\end{DoxyParamCaption})}
+
+
+
+Update function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (gt)} & passes Game\+Timer for the update function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_aircraft_8cpp_source}{Aircraft.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_aircraft_a09e5e4000b0512b92ab7bbd7efeac14f}\label{class_aircraft_a09e5e4000b0512b92ab7bbd7efeac14f}} 
+\index{Aircraft@{Aircraft}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily std\+::string Aircraft\+::m\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{_aircraft_8hpp_source}{Aircraft.\+hpp}}.
+
+\mbox{\Hypertarget{class_aircraft_a4228cdd5cf4f8b1b41ad481446b7ee4c}\label{class_aircraft_a4228cdd5cf4f8b1b41ad481446b7ee4c}} 
+\index{Aircraft@{Aircraft}!mType@{mType}}
+\index{mType@{mType}!Aircraft@{Aircraft}}
+\doxysubsubsection{\texorpdfstring{mType}{mType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aircraft_a7dae28542933e088032b753600046acd}{Type}} Aircraft\+::m\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Type) Enum type of \mbox{\hyperlink{class_aircraft}{Aircraft}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_aircraft_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{_aircraft_8hpp_source}{Aircraft.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A2/\mbox{\hyperlink{_aircraft_8hpp}{Aircraft.\+hpp}}\item 
+A2/\mbox{\hyperlink{_aircraft_8cpp}{Aircraft.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,178 @@
+\hypertarget{class_sprite_node}{}\doxysection{Sprite\+Node Class Reference}
+\label{class_sprite_node}\index{SpriteNode@{SpriteNode}}
+
+
+{\ttfamily \#include $<$Sprite\+Node.\+h$>$}
+
+Inheritance diagram for Sprite\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sprite_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite_node_1_1_b_g_mover}{BGMover}}
+\begin{DoxyCompactList}\small\item\em A struct type Struct Type that makes the Background Scroll. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprite_node_af9a13269b4f3d7a194e1826c704155dc}{Sprite\+Node}} (\mbox{\hyperlink{class_game}{Game}} $\ast$\mbox{\hyperlink{class_scene_node_a06d1261ef839789469f228e7a7f2bfb9}{game}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sprite_node_a123091dc0682bdffaeffe1b765ee20d3}{Update}} (const Game\+Timer gt)
+\begin{DoxyCompactList}\small\item\em Update function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sprite_node_a237ab4cffda91e6975138ed60c265cf9}{Update\+With\+Cmd}} (\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&commands)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}{background\+Speed}}
+\begin{DoxyCompactList}\small\item\em (background\+Speed) float value for the Background\textquotesingle{}s speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_sprite_node_af2b08010aaf9f08d6dff3bef56878664}{draw\+Current}} () const
+\begin{DoxyCompactList}\small\item\em Draws the Render Item during the current frame. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_sprite_node_a2462cdafea4b33c9ccabbf4f2e5a6a7d}{build\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Builds the Render Item for the Sprite Node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_sprite_node_8h_source_l00005}{5}} of file \mbox{\hyperlink{_sprite_node_8h_source}{Sprite\+Node.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sprite_node_af9a13269b4f3d7a194e1826c704155dc}\label{class_sprite_node_af9a13269b4f3d7a194e1826c704155dc}} 
+\index{SpriteNode@{SpriteNode}!SpriteNode@{SpriteNode}}
+\index{SpriteNode@{SpriteNode}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{SpriteNode()}{SpriteNode()}}
+{\footnotesize\ttfamily Sprite\+Node\+::\+Sprite\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (game)} & instance reference of a \mbox{\hyperlink{class_game}{Game}} class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_sprite_node_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_sprite_node_8cpp_source}{Sprite\+Node.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprite_node_a2462cdafea4b33c9ccabbf4f2e5a6a7d}\label{class_sprite_node_a2462cdafea4b33c9ccabbf4f2e5a6a7d}} 
+\index{SpriteNode@{SpriteNode}!buildCurrent@{buildCurrent}}
+\index{buildCurrent@{buildCurrent}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{buildCurrent()}{buildCurrent()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::build\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Builds the Render Item for the Sprite Node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_af79c6134a7706a5901c7742b5f735956}{Scene\+Node}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sprite_node_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_sprite_node_8cpp_source}{Sprite\+Node.\+cpp}}.
+
+\mbox{\Hypertarget{class_sprite_node_af2b08010aaf9f08d6dff3bef56878664}\label{class_sprite_node_af2b08010aaf9f08d6dff3bef56878664}} 
+\index{SpriteNode@{SpriteNode}!drawCurrent@{drawCurrent}}
+\index{drawCurrent@{drawCurrent}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{drawCurrent()}{drawCurrent()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::draw\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Draws the Render Item during the current frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_scene_node_a0d7d32b925dde5ed087f112774a044b8}{Scene\+Node}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sprite_node_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_sprite_node_8cpp_source}{Sprite\+Node.\+cpp}}.
+
+\mbox{\Hypertarget{class_sprite_node_a123091dc0682bdffaeffe1b765ee20d3}\label{class_sprite_node_a123091dc0682bdffaeffe1b765ee20d3}} 
+\index{SpriteNode@{SpriteNode}!Update@{Update}}
+\index{Update@{Update}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::\+Update (\begin{DoxyParamCaption}\item[{const Game\+Timer}]{gt }\end{DoxyParamCaption})}
+
+
+
+Update function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (gt)} & passes Game\+Timer for the update function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_sprite_node_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_sprite_node_8cpp_source}{Sprite\+Node.\+cpp}}.
+
+\mbox{\Hypertarget{class_sprite_node_a237ab4cffda91e6975138ed60c265cf9}\label{class_sprite_node_a237ab4cffda91e6975138ed60c265cf9}} 
+\index{SpriteNode@{SpriteNode}!UpdateWithCmd@{UpdateWithCmd}}
+\index{UpdateWithCmd@{UpdateWithCmd}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{UpdateWithCmd()}{UpdateWithCmd()}}
+{\footnotesize\ttfamily void Sprite\+Node\+::\+Update\+With\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&}]{commands }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_sprite_node_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_sprite_node_8cpp_source}{Sprite\+Node.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}\label{class_sprite_node_a3331ad2945e164322796e8a75c3fc5e2}} 
+\index{SpriteNode@{SpriteNode}!backgroundSpeed@{backgroundSpeed}}
+\index{backgroundSpeed@{backgroundSpeed}!SpriteNode@{SpriteNode}}
+\doxysubsubsection{\texorpdfstring{backgroundSpeed}{backgroundSpeed}}
+{\footnotesize\ttfamily float Sprite\+Node\+::background\+Speed}
+
+
+
+(background\+Speed) float value for the Background\textquotesingle{}s speed. 
+
+
+
+Definition at line \mbox{\hyperlink{_sprite_node_8h_source_l00039}{39}} of file \mbox{\hyperlink{_sprite_node_8h_source}{Sprite\+Node.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A2/\mbox{\hyperlink{_sprite_node_8h}{Sprite\+Node.\+h}}\item 
+A2/\mbox{\hyperlink{_sprite_node_8cpp}{Sprite\+Node.\+cpp}}\end{DoxyCompactItemize}

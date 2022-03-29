@@ -1,0 +1,100 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_player_1_1_aircraft_mover}{Aircraft\+Mover}}
+\begin{DoxyCompactList}\small\item\em A struct type Struct Type that has the \mbox{\hyperlink{class_aircraft}{Aircraft}} Mover \mbox{\hyperlink{struct_command}{Command}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_abdabbfe5ce0c04acf504ff5054dbcbc1}{handle\+Event}} (\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&commands)
+\begin{DoxyCompactList}\small\item\em Handle\textquotesingle{}s event for the recieved command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ac520744c103fb38763c8856b4f158627}{handle\+Realtime\+Input}} (\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&commands)
+\begin{DoxyCompactList}\small\item\em Handle\textquotesingle{}s event for the recieved command in the current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_player_a96abeb40b95dab02ceda64f8b974e954}{player\+Speed}} = 0.\+01f
+\begin{DoxyCompactList}\small\item\em (player\+Speed) float value for the speed of \mbox{\hyperlink{class_player}{Player}} Movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00009}{9}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_abdabbfe5ce0c04acf504ff5054dbcbc1}\label{class_player_abdabbfe5ce0c04acf504ff5054dbcbc1}} 
+\index{Player@{Player}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily void Player\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&}]{commands }\end{DoxyParamCaption})}
+
+
+
+Handle\textquotesingle{}s event for the recieved command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (commands)} & the command\+Queue type that passes in the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_player_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_player_8cpp_source}{Player.\+cpp}}.
+
+\mbox{\Hypertarget{class_player_ac520744c103fb38763c8856b4f158627}\label{class_player_ac520744c103fb38763c8856b4f158627}} 
+\index{Player@{Player}!handleRealtimeInput@{handleRealtimeInput}}
+\index{handleRealtimeInput@{handleRealtimeInput}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{handleRealtimeInput()}{handleRealtimeInput()}}
+{\footnotesize\ttfamily void Player\+::handle\+Realtime\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \&}]{commands }\end{DoxyParamCaption})}
+
+
+
+Handle\textquotesingle{}s event for the recieved command in the current frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (commands)} & the command that tells the handle\+Event function what command has been pressed.. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_player_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_player_8cpp_source}{Player.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a96abeb40b95dab02ceda64f8b974e954}\label{class_player_a96abeb40b95dab02ceda64f8b974e954}} 
+\index{Player@{Player}!playerSpeed@{playerSpeed}}
+\index{playerSpeed@{playerSpeed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{playerSpeed}{playerSpeed}}
+{\footnotesize\ttfamily const float Player\+::player\+Speed = 0.\+01f}
+
+
+
+(player\+Speed) float value for the speed of \mbox{\hyperlink{class_player}{Player}} Movement. 
+
+
+
+Definition at line \mbox{\hyperlink{_player_8h_source_l00037}{37}} of file \mbox{\hyperlink{_player_8h_source}{Player.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A2/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+A2/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

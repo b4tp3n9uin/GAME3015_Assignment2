@@ -1,0 +1,374 @@
+\hypertarget{class_world}{}\doxysection{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+{\ttfamily \#include $<$World.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_world_a712eb4a5b0d12588dd61d10c91b83366}{World}} (\mbox{\hyperlink{class_game}{Game}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_world_a36c003f54e14e022a360551af5e7923e}{update}} (const Game\+Timer \&gt)
+\begin{DoxyCompactList}\small\item\em Update function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_world_ab51a17ccbb108616daacd0c34973dc8d}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Draws the Scene Nodes in the \mbox{\hyperlink{class_world}{World}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_world_ae7df49f5d488e5cd1254bf360966f410}{build\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Builds all the nodes in the world. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \& \mbox{\hyperlink{class_world_af224b413f30c86ec99d042d0f4df56ee}{get\+Command\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the \mbox{\hyperlink{class_command_queue}{Command\+Queue}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_world_a7580b1f38bb9018be3eeef74462b4b2f}{Layer}} \{ \mbox{\hyperlink{class_world_a7580b1f38bb9018be3eeef74462b4b2fa978d5e24a046c655c1a7d684c19bdcf0}{Background}}
+, \mbox{\hyperlink{class_world_a7580b1f38bb9018be3eeef74462b4b2fa130351e16065c2accbaba11e0441c03a}{Air}}
+, \mbox{\hyperlink{class_world_a7580b1f38bb9018be3eeef74462b4b2fab85a44d6989a43dc11f11bacedb2bf94}{Layer\+Count}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enum type Enum for the different types of Layers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_world_a625a8dbdd805000904fb376215ca4c0a}{m\+Game}}
+\begin{DoxyCompactList}\small\item\em (m\+Game) Pointer to the \mbox{\hyperlink{class_game}{Game}} class \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scene_node}{Scene\+Node}} $\ast$ \mbox{\hyperlink{class_world_abf9d49d6f67de1caff82e111a4f29040}{m\+Scene\+Graph}}
+\begin{DoxyCompactList}\small\item\em (m\+Scene\+Graph) Pointer to Nodes of the Scene Graph. \end{DoxyCompactList}\item 
+std\+::array$<$ \mbox{\hyperlink{class_scene_node}{Scene\+Node}} $\ast$, \mbox{\hyperlink{class_world_a7580b1f38bb9018be3eeef74462b4b2fab85a44d6989a43dc11f11bacedb2bf94}{Layer\+Count}} $>$ \mbox{\hyperlink{class_world_a6edbba54ac354295d50128255c7a0e70}{m\+Scene\+Layers}}
+\item 
+XMFLOAT4 \mbox{\hyperlink{class_world_a3be772106be584dff01efa4a27fc13a7}{m\+World\+Bounds}}
+\item 
+XMFLOAT2 \mbox{\hyperlink{class_world_a8bde7886e9d66e6bda46921d97186f66}{m\+Spawn\+Position}}
+\begin{DoxyCompactList}\small\item\em (m\+Spawn\+Position) position where to spawn the nodes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_aircraft}{Aircraft}} $\ast$ \mbox{\hyperlink{class_world_a5e511d7599995d30084959c91d98e13d}{m\+Player\+Aircraft}}
+\begin{DoxyCompactList}\small\item\em (m\+Player\+Aircraft) Pointer to the \mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_aircraft}{Aircraft}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sprite_node}{Sprite\+Node}} $\ast$ \mbox{\hyperlink{class_world_a6f3b09177168e5a7b34fd9418a94136a}{m\+Background}}
+\begin{DoxyCompactList}\small\item\em (m\+Background) pointer of Background, which is a \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_aircraft}{Aircraft}} $\ast$ \mbox{\hyperlink{class_world_a9c75c7433b37fc02925d6425e1b7f8a9}{m\+Enemy}}
+\begin{DoxyCompactList}\small\item\em (m\+Enemy) Pointer to the \mbox{\hyperlink{class_enemy}{Enemy}} \mbox{\hyperlink{class_aircraft}{Aircraft}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_world_a1c2d240ef6483547a5c2e5ded0e3a150}{m\+Scroll\+Speed}}
+\begin{DoxyCompactList}\small\item\em (m\+Scroll\+Speed) float value, Speed of the Background Scroll. \end{DoxyCompactList}\item 
+XMFLOAT3 \mbox{\hyperlink{class_world_a6482b97de0298a12bde2dc8854c6c709}{aircraft\+Size}}
+\begin{DoxyCompactList}\small\item\em (aircraft\+Size) XMFLOAT3 type. \end{DoxyCompactList}\item 
+XMFLOAT3 \mbox{\hyperlink{class_world_afde58abf7d774d0985ddaa6a3658706e}{enemy\+Size}}
+\begin{DoxyCompactList}\small\item\em (enemy\+Size) XMFLOAT3 type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_command_queue}{Command\+Queue}} \mbox{\hyperlink{class_world_ac61a05f472f92394ba030ef616656ea2}{c\+Queue}}
+\begin{DoxyCompactList}\small\item\em (c\+Queue) \mbox{\hyperlink{struct_command}{Command}} Queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00008}{8}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_world_a7580b1f38bb9018be3eeef74462b4b2f}\label{class_world_a7580b1f38bb9018be3eeef74462b4b2f}} 
+\index{World@{World}!Layer@{Layer}}
+\index{Layer@{Layer}!World@{World}}
+\doxysubsubsection{\texorpdfstring{Layer}{Layer}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_world_a7580b1f38bb9018be3eeef74462b4b2f}{World\+::\+Layer}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+An enum type Enum for the different types of Layers. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Background@{Background}!World@{World}}\index{World@{World}!Background@{Background}}}\mbox{\Hypertarget{class_world_a7580b1f38bb9018be3eeef74462b4b2fa978d5e24a046c655c1a7d684c19bdcf0}\label{class_world_a7580b1f38bb9018be3eeef74462b4b2fa978d5e24a046c655c1a7d684c19bdcf0}} 
+Background&enum for the Background \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Air@{Air}!World@{World}}\index{World@{World}!Air@{Air}}}\mbox{\Hypertarget{class_world_a7580b1f38bb9018be3eeef74462b4b2fa130351e16065c2accbaba11e0441c03a}\label{class_world_a7580b1f38bb9018be3eeef74462b4b2fa130351e16065c2accbaba11e0441c03a}} 
+Air&enum for the air above the Background \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LayerCount@{LayerCount}!World@{World}}\index{World@{World}!LayerCount@{LayerCount}}}\mbox{\Hypertarget{class_world_a7580b1f38bb9018be3eeef74462b4b2fab85a44d6989a43dc11f11bacedb2bf94}\label{class_world_a7580b1f38bb9018be3eeef74462b4b2fab85a44d6989a43dc11f11bacedb2bf94}} 
+Layer\+Count&enum for Layer count \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_world_a712eb4a5b0d12588dd61d10c91b83366}\label{class_world_a712eb4a5b0d12588dd61d10c91b83366}} 
+\index{World@{World}!World@{World}}
+\index{World@{World}!World@{World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily World\+::\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (window)} & instance reference of a \mbox{\hyperlink{class_game}{Game}} class for the \mbox{\hyperlink{class_game}{Game}} Window. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_world_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_world_8cpp_source}{World.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_world_ae7df49f5d488e5cd1254bf360966f410}\label{class_world_ae7df49f5d488e5cd1254bf360966f410}} 
+\index{World@{World}!buildScene@{buildScene}}
+\index{buildScene@{buildScene}!World@{World}}
+\doxysubsubsection{\texorpdfstring{buildScene()}{buildScene()}}
+{\footnotesize\ttfamily void World\+::build\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Builds all the nodes in the world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_world_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_world_8cpp_source}{World.\+cpp}}.
+
+\mbox{\Hypertarget{class_world_ab51a17ccbb108616daacd0c34973dc8d}\label{class_world_ab51a17ccbb108616daacd0c34973dc8d}} 
+\index{World@{World}!draw@{draw}}
+\index{draw@{draw}!World@{World}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void World\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the Scene Nodes in the \mbox{\hyperlink{class_world}{World}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_world_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_world_8cpp_source}{World.\+cpp}}.
+
+\mbox{\Hypertarget{class_world_af224b413f30c86ec99d042d0f4df56ee}\label{class_world_af224b413f30c86ec99d042d0f4df56ee}} 
+\index{World@{World}!getCommandQueue@{getCommandQueue}}
+\index{getCommandQueue@{getCommandQueue}!World@{World}}
+\doxysubsubsection{\texorpdfstring{getCommandQueue()}{getCommandQueue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_command_queue}{Command\+Queue}} \& World\+::get\+Command\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the \mbox{\hyperlink{class_command_queue}{Command\+Queue}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_world_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{_world_8cpp_source}{World.\+cpp}}.
+
+\mbox{\Hypertarget{class_world_a36c003f54e14e022a360551af5e7923e}\label{class_world_a36c003f54e14e022a360551af5e7923e}} 
+\index{World@{World}!update@{update}}
+\index{update@{update}!World@{World}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void World\+::update (\begin{DoxyParamCaption}\item[{const Game\+Timer \&}]{gt }\end{DoxyParamCaption})}
+
+
+
+Update function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (gt)} & passes Game\+Timer for the update function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_world_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_world_8cpp_source}{World.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_world_a6482b97de0298a12bde2dc8854c6c709}\label{class_world_a6482b97de0298a12bde2dc8854c6c709}} 
+\index{World@{World}!aircraftSize@{aircraftSize}}
+\index{aircraftSize@{aircraftSize}!World@{World}}
+\doxysubsubsection{\texorpdfstring{aircraftSize}{aircraftSize}}
+{\footnotesize\ttfamily XMFLOAT3 World\+::aircraft\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(aircraft\+Size) XMFLOAT3 type. 
+
+Size of the \mbox{\hyperlink{class_player}{Player}} in the world. 
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00100}{100}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_ac61a05f472f92394ba030ef616656ea2}\label{class_world_ac61a05f472f92394ba030ef616656ea2}} 
+\index{World@{World}!cQueue@{cQueue}}
+\index{cQueue@{cQueue}!World@{World}}
+\doxysubsubsection{\texorpdfstring{cQueue}{cQueue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_command_queue}{Command\+Queue}} World\+::c\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(c\+Queue) \mbox{\hyperlink{struct_command}{Command}} Queue. 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00110}{110}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_afde58abf7d774d0985ddaa6a3658706e}\label{class_world_afde58abf7d774d0985ddaa6a3658706e}} 
+\index{World@{World}!enemySize@{enemySize}}
+\index{enemySize@{enemySize}!World@{World}}
+\doxysubsubsection{\texorpdfstring{enemySize}{enemySize}}
+{\footnotesize\ttfamily XMFLOAT3 World\+::enemy\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(enemy\+Size) XMFLOAT3 type. 
+
+Size of the \mbox{\hyperlink{class_enemy}{Enemy}} in the world. 
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00105}{105}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a6f3b09177168e5a7b34fd9418a94136a}\label{class_world_a6f3b09177168e5a7b34fd9418a94136a}} 
+\index{World@{World}!mBackground@{mBackground}}
+\index{mBackground@{mBackground}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mBackground}{mBackground}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}$\ast$ World\+::m\+Background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Background) pointer of Background, which is a \mbox{\hyperlink{class_sprite_node}{Sprite\+Node}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00085}{85}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a9c75c7433b37fc02925d6425e1b7f8a9}\label{class_world_a9c75c7433b37fc02925d6425e1b7f8a9}} 
+\index{World@{World}!mEnemy@{mEnemy}}
+\index{mEnemy@{mEnemy}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mEnemy}{mEnemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aircraft}{Aircraft}}$\ast$ World\+::m\+Enemy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Enemy) Pointer to the \mbox{\hyperlink{class_enemy}{Enemy}} \mbox{\hyperlink{class_aircraft}{Aircraft}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00090}{90}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a625a8dbdd805000904fb376215ca4c0a}\label{class_world_a625a8dbdd805000904fb376215ca4c0a}} 
+\index{World@{World}!mGame@{mGame}}
+\index{mGame@{mGame}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mGame}{mGame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}$\ast$ World\+::m\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Game) Pointer to the \mbox{\hyperlink{class_game}{Game}} class 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00059}{59}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a5e511d7599995d30084959c91d98e13d}\label{class_world_a5e511d7599995d30084959c91d98e13d}} 
+\index{World@{World}!mPlayerAircraft@{mPlayerAircraft}}
+\index{mPlayerAircraft@{mPlayerAircraft}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mPlayerAircraft}{mPlayerAircraft}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aircraft}{Aircraft}}$\ast$ World\+::m\+Player\+Aircraft\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Player\+Aircraft) Pointer to the \mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_aircraft}{Aircraft}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00080}{80}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_abf9d49d6f67de1caff82e111a4f29040}\label{class_world_abf9d49d6f67de1caff82e111a4f29040}} 
+\index{World@{World}!mSceneGraph@{mSceneGraph}}
+\index{mSceneGraph@{mSceneGraph}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mSceneGraph}{mSceneGraph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_node}{Scene\+Node}}$\ast$ World\+::m\+Scene\+Graph\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Scene\+Graph) Pointer to Nodes of the Scene Graph. 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00064}{64}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a6edbba54ac354295d50128255c7a0e70}\label{class_world_a6edbba54ac354295d50128255c7a0e70}} 
+\index{World@{World}!mSceneLayers@{mSceneLayers}}
+\index{mSceneLayers@{mSceneLayers}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mSceneLayers}{mSceneLayers}}
+{\footnotesize\ttfamily std\+::array$<$\mbox{\hyperlink{class_scene_node}{Scene\+Node}}$\ast$, \mbox{\hyperlink{class_world_a7580b1f38bb9018be3eeef74462b4b2fab85a44d6989a43dc11f11bacedb2bf94}{Layer\+Count}}$>$ World\+::m\+Scene\+Layers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00065}{65}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a1c2d240ef6483547a5c2e5ded0e3a150}\label{class_world_a1c2d240ef6483547a5c2e5ded0e3a150}} 
+\index{World@{World}!mScrollSpeed@{mScrollSpeed}}
+\index{mScrollSpeed@{mScrollSpeed}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mScrollSpeed}{mScrollSpeed}}
+{\footnotesize\ttfamily float World\+::m\+Scroll\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Scroll\+Speed) float value, Speed of the Background Scroll. 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00095}{95}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a8bde7886e9d66e6bda46921d97186f66}\label{class_world_a8bde7886e9d66e6bda46921d97186f66}} 
+\index{World@{World}!mSpawnPosition@{mSpawnPosition}}
+\index{mSpawnPosition@{mSpawnPosition}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mSpawnPosition}{mSpawnPosition}}
+{\footnotesize\ttfamily XMFLOAT2 World\+::m\+Spawn\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(m\+Spawn\+Position) position where to spawn the nodes. 
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+\mbox{\Hypertarget{class_world_a3be772106be584dff01efa4a27fc13a7}\label{class_world_a3be772106be584dff01efa4a27fc13a7}} 
+\index{World@{World}!mWorldBounds@{mWorldBounds}}
+\index{mWorldBounds@{mWorldBounds}!World@{World}}
+\doxysubsubsection{\texorpdfstring{mWorldBounds}{mWorldBounds}}
+{\footnotesize\ttfamily XMFLOAT4 World\+::m\+World\+Bounds\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_world_8hpp_source_l00067}{67}} of file \mbox{\hyperlink{_world_8hpp_source}{World.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A2/\mbox{\hyperlink{_world_8hpp}{World.\+hpp}}\item 
+A2/\mbox{\hyperlink{_world_8cpp}{World.\+cpp}}\end{DoxyCompactItemize}
