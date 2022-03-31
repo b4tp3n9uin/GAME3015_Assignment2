@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "GAME3015_Assignment2", "index.html", [
+  [ "GAME3015 Assignment2 M_Makepeace", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
